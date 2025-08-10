@@ -1,14 +1,30 @@
+#file handling operations
+import json
+#load tasks
+def load_prev_task():
+    try:
+        with open("tasks.json","r") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return []
+
+#save tasks
+def save_tasks(tasks):
+    with open("tasks.json","w") as file:
+        json.dump(tasks,file,indent=4)
+
+
 #for storing tasks
-tasks = []
+tasks = load_prev_task()
 
 #main menu
 def menu():
-    print("------ To-Do List Main Menu --------")
+    print("------ To-Do Lists Main Menu --------")
     print("1. View Tasks")
     print("2. Add Task")
     print("3. Mark Task as Completed")
     print("4. Delete Task")
-    print("5. Exit")
+    print("5. Save & Exit")
 
 #defining each menu
 def view_task():
@@ -21,6 +37,8 @@ def view_task():
 def add_task():
     new_task = input("New Task : ")
     tasks.append(new_task)
+    save_tasks(tasks)
+
 
 def mark_task():
     if not tasks:
@@ -46,6 +64,7 @@ def delete_task():
         tasks.pop(delete-1)
         print("Task has deleted Successfully")
 
+
 #working function
 while True :
     print("\n")
@@ -61,7 +80,8 @@ while True :
     elif user_choice=='4':
         delete_task()
     elif user_choice=='5':
-        print("User Exits")
+        save_tasks(tasks)
+        print("Saved Success! User Exits")
         break
     else :
         print("Invalid User Choice, Enter a Valid Option")
