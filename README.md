@@ -1,4 +1,4 @@
-💼 **CodSoft Internship – Python Programming (August 2025)**
+💼 # **CodSoft Internship – Python Programming (August 2025)**
 Welcome to my CodSoft Internship repository!
 This repository contains all the projects I completed during the **Python Programming Internship** offered by CodSoft in August 2025.
 
