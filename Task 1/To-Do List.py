@@ -16,5 +16,25 @@ def view_task():
         print("There is no Tasks")
     else :
         for i, task in enumerate(tasks, start = 1):
-            print(f"{i}.{task}")
+            print(f"{i}. {task}")
+
+def add_task():
+    new_task = input("New Task : ")
+    tasks.append(new_task)
+
+#working function
+while True :
+    print("\n")
+    menu()
+    user_choice = input("Choose an Option : ")
+
+    if user_choice=='1':
+        view_task()
+    elif user_choice=='2':
+        add_task()
+    elif user_choice=='5':
+        print("User Exits")
+        break
+    else :
+        print("Invalid User Choice, Enter a Valid Option")
 
