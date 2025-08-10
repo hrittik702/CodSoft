@@ -18,11 +18,3 @@ def view_task():
         for i, task in enumerate(tasks, start = 1):
             print(f"{i}.{task}")
 
-
-=======
-print("------ To-Do Lists Main Menu --------")
-print("View Tasks")
-print("Add Task")
-print("Mark Task as Completed")
-print()
->>>>>>> 863b894 (Adding Readme and Menu)
