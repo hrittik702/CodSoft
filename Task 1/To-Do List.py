@@ -3,7 +3,7 @@ tasks = []
 
 #main menu
 def menu():
-    print("------ To-Do Lists Main Menu --------")
+    print("------ To-Do List Main Menu --------")
     print("1. View Tasks")
     print("2. Add Task")
     print("3. Mark Task as Completed")
@@ -37,8 +37,14 @@ def mark_task():
         except(IndexError,ValueError):
             print("Invalid Task Number, Please Try Again")
 
-
-        
+def delete_task():
+    if not tasks:
+        print("Please add a Task First")
+    else :
+        view_task()
+        delete = int(input("Enter Task No. : "))
+        tasks.pop(delete-1)
+        print("Task has deleted Successfully")
 
 #working function
 while True :
@@ -52,6 +58,8 @@ while True :
         add_task()
     elif user_choice=='3':
         mark_task()
+    elif user_choice=='4':
+        delete_task()
     elif user_choice=='5':
         print("User Exits")
         break
