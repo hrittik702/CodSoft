@@ -25,12 +25,20 @@ def add_task():
 def mark_task():
     if not tasks:
         print("Please, Add a Task First")
-    else:
+    else :
         view_task()
-        mark = input("Enter Task No. to mark Completed")
-        tasks[mark-1] = tasks[mark-1] + " ✅"
-        print("Task marked as Completed")
+        try:
+            mark = int(input("Enter Task No. to mark Completed : "))
+            if " ✅" in tasks[mark-1]:
+                print("Task has already marked Completed")
+            else : 
+                tasks[mark-1] = tasks[mark-1] + " ✅"
+                print("Task marked as Completed")
+        except(IndexError,ValueError):
+            print("Invalid Task Number, Please Try Again")
 
+
+        
 
 #working function
 while True :
@@ -42,6 +50,8 @@ while True :
         view_task()
     elif user_choice=='2':
         add_task()
+    elif user_choice=='3':
+        mark_task()
     elif user_choice=='5':
         print("User Exits")
         break
