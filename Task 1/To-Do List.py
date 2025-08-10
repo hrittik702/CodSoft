@@ -19,3 +19,10 @@ def view_task():
             print(f"{i}.{task}")
 
 
+=======
+print("------ To-Do Lists Main Menu --------")
+print("View Tasks")
+print("Add Task")
+print("Mark Task as Completed")
+print()
+>>>>>>> 863b894 (Adding Readme and Menu)
