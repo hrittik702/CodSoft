@@ -1,3 +1,7 @@
+from tkinter import *
+h_root = Tk()
+h_root.geometry('960x600')
+h_root.minsize(900,600)
 #file handling operations
 import json
 #load tasks
@@ -86,4 +90,4 @@ while True :
     else :
         print("Invalid User Choice, Enter a Valid Option")
 
-
+h_root.mainloop()
