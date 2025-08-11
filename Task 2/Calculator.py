@@ -1,6 +1,5 @@
 
 def menu():
-    print("\n")
     print("\n--------- SIMPLE CALCULATOR -----------")
     print("1. Addition")
     print("2. Subtraction")
