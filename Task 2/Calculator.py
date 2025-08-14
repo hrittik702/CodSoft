@@ -28,7 +28,10 @@ while True :
     elif choice == 4:
         a = float(input("Enter First no. : "))
         b = float(input("Enter Second no. : "))
-        print("Division = ",a/b)
+        if(b==0):
+            print("Enter Valid, Number")
+        else :
+            print("Division = ",a/b)
     elif choice == 5:
         a = float(input("Enter First no. : "))
         b = float(input("Enter Second no. : "))
